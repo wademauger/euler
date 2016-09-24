@@ -14,4 +14,4 @@ defmodule Problem1 do
 
 end
 
-IO.puts Problem1.solve()
+Problem1.solve |> IO.puts

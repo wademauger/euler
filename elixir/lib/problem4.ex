@@ -6,25 +6,24 @@ defmodule Problem4 do
   Find the largest palindrome made from the product of two 3-digit numbers.
 
     >iex solve
-    906609
+    90660
   """
   def solve do
     find_solution(999, 999, 0)
   end
 
-  def palindrome?(num) do
+  defp palindrome?(num) do
     str = Integer.to_string(num)
     str == String.reverse(str)
   end
 
-  def palindrome_product?(x, y), do: (x * y) |> palindrome?
+  defp palindrome_product?(x, y), do: (x * y) |> palindrome?
 
   defp find_solution(x, y, greatest) do
     cond do
       y < 100 ->
         greatest
       palindrome_product?(x, y) and (x * y) > greatest ->
-        IO.puts "A solution is product of #{x} and #{y}, #{x*y}"
         find_solution(x-1, y, x*y)
       x >= 100 ->
         find_solution(x-1, y, greatest)
