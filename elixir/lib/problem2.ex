@@ -35,4 +35,4 @@ defmodule Problem2 do
 
 end
 
-Problem2.solve |> IO.puts
+IO.puts "Problem 2: #{Problem2.solve}"

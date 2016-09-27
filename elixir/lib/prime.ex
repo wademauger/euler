@@ -30,7 +30,7 @@ defmodule Prime do
   defp do_prime(num, counter) when (counter * counter) <= num do
     do_prime(num, counter + 2)
   end
-  defp do_prime(num, counter), do: true
+  defp do_prime(_, _), do: true
 
   def test do
     IO.puts prime?(1)   # false
