@@ -119,3 +119,5 @@ defmodule Problem11 do
   end
 
 end
+
+IO.puts "Problem 11 : #{Problem11.solve}"
