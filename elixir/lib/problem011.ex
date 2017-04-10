@@ -8,7 +8,7 @@ defmodule Problem11 do
       x -> Enum.map y, fn
         y -> targetToProducts grid, x, y
       end
-    end)
+    end )
     |> List.flatten
     |> Enum.reduce(0, fn x, acc -> if (x > acc), do: x, else: acc end)
   end
